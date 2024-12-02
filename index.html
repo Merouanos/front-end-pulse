@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/boxicons-2.1.4/css/boxicons.min.css">
+    <title>pulse</title>
+
+<!--Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                green_solid: '#00ad6a',
+                green_light:'#1fe374',
+                main:'#eafaf1',
+                special:'#d6dae5',
+                hero:'#fcfcfc',
+              }
+          
+            
+            }
+          }
+        }
+      </script>
+
+
+
+
+<style type="text/tailwindcss">
+    @layer utilities {
+      .container{
+        @apply flex mx-auto md:w-3/4 w-full px-5 md:px-0
+      }
+      button{
+       @apply border-green_solid border-2 py-1 px-5 hover:translate-x-1 hover:-translate-y-1 after:bg-green_solid
+      }
+      li{
+        @apply hover:text-black hover:drop-shadow-2xl
+      }
+      .shadow-copy {
+      box-shadow: -5px 5px 0px 0px #00ad6a;
+    }
+     div span{
+      @apply w-full h-1 bg-green-600 h-1
+     }
+    }
+  </style>
+
+</head>
+<body class="bg-main">
+    
+    <header class="md:bg-transparent bg-white py-5">
+      <div class="container justify-between items-center">
+
+        <a href="#"><img src="https://pulseapp.com/img/pulse-logo.svg" alt="pulse-logo"></a>
+
+
+
+
+
+        <ul class="hidden md:flex gap-10 items-center font-bold text-green_solid">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Customer Stories</a></li>
+          <li class="text-black"><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <button class="hover:shadow-copy">Sign Up</button>
+          
+        </ul>
+
+        <div class="md:hidden w-9 h-7 flex flex-col justify-between hover:cursor-pointer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </header>
+
+
+
+    
+</body>
+</html>
