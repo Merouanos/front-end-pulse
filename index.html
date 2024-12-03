@@ -1,111 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/boxicons-2.1.4/css/boxicons.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/boxicons-2.1.4/css/boxicons.min.css" />
     <title>pulse</title>
 
-<!--Tailwind-->
+    <!--Tailwind-->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                green_solid: '#00ad6a',
-                green_light:'#1fe374',
-                main:'#eafaf1',
-                special:'#d6dae5',
-                hero:'#fcfcfc',
-              }
-          
-            
-            }
-          }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              green_solid: "#00ad6a",
+              green_light: "#1fe374",
+              main: "#eafaf1",
+              special: "#d6dae5",
+              hero: "#fcfcfc",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .container {
+          @apply flex mx-auto md:w-3/4 w-full px-5 md:px-0;
         }
-      </script>
-
-
-
-
-<style type="text/tailwindcss">
-    @layer utilities {
-      .container{
-        @apply flex mx-auto md:w-3/4 w-full px-5 md:px-0
+        button {
+          @apply border-green_solid border-2 py-1 px-5 hover:translate-x-1 hover:-translate-y-1 after:bg-green_solid;
+        }
+        header li {
+          @apply hover:text-black hover:drop-shadow-2xl;
+        }
+        .shadow-copy {
+          box-shadow: -5px 5px 0px 0px #00ad6a;
+        }
+        header div span {
+          @apply w-full h-1 bg-green-600;
+        }
+       
       }
-      button{
-       @apply border-green_solid border-2 py-1 px-5 hover:translate-x-1 hover:-translate-y-1 after:bg-green_solid
-      }
-      li{
-        @apply hover:text-black hover:drop-shadow-2xl
-      }
-      .shadow-copy {
-      box-shadow: -5px 5px 0px 0px #00ad6a;
-    }
-     div span{
-      @apply w-full h-1 bg-green-600 h-1
-     }
-    }
-  </style>
-
-</head>
-<body class="bg-main">
-    
+    </style>
+  </head>
+  <body class="bg-main">
     <header class="md:bg-transparent bg-white py-5">
       <div class="container justify-between items-center">
+        <a href="#"
+          ><img src="https://pulseapp.com/img/pulse-logo.svg" alt="pulse-logo"
+        /></a>
 
-        <a href="#"><img src="https://pulseapp.com/img/pulse-logo.svg" alt="pulse-logo"></a>
-
-
-
-
-
-        <ul class="hidden md:flex gap-10 items-center font-bold text-green_solid">
+        <ul
+          class="hidden md:flex gap-10 items-center font-bold text-green_solid"
+        >
           <li><a href="#">Features</a></li>
           <li><a href="#">Customer Stories</a></li>
           <li class="text-black"><a href="#">Pricing</a></li>
           <li><a href="#">Blog</a></li>
           <button class="hover:shadow-copy">Sign Up</button>
-          
         </ul>
 
-        <div class="md:hidden w-9 h-7 flex flex-col justify-between hover:cursor-pointer">
+        <div
+          class="md:hidden w-9 h-7 flex flex-col justify-between hover:cursor-pointer"
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
-
-
-
-
-
-
-
-
-
-
     </header>
 
+    <main>
+      <div class="hero-1 mt-16">
+        <div class="container flex-col items-center text-center gap-y-20">
+          <div class="flex flex-col w-1/2 gap-y-5">
+            <h1 class="md:text-6xl font-bold">Try Pulse free for 30 days.</h1>
+            <p>
+              See why Pulse is the best way to monitor your cash flow. Sign up
+              for any plan and try Pulse absolutely free for 30 days.
+            </p>
+          </div>
 
+          <div class="grid md:grid-cols-3 grid-cols-1 gap-10">
+            <article class="w-3/4 text-start flex flex-col gap-y-5 text-slate-700">
+              <header class="text-green-600 font-bold md:text-xl text-base" >
+                These are what we call the Pulse Basics. They’re what every
+                customer gets.
+              </header>
+              <main class>
+                <ul class="list-disc list-inside">
+                  <li>
+                    Manage cash flow on a daily, weekly, monthly, or yearly
+                    basis
+                  </li>
+                  <li>
+                    Forecast growth with recurring income or expenses that scale
+                    automatically
+                  </li>
 
-    
-</body>
+                  <li>Works with any currency</li>
+
+                  <li>
+                    See Money In and Money Out, categorize transactions, and run
+                    helpful reports
+                  </li>
+
+                  <li>
+                    Toggle entries and accounts on and off to game out different
+                    scenarios
+                  </li>
+                </ul>
+              </main>
+              <footer>
+                <p>Just need the Pulse Basics?</p>
+                <p><a href="#" class="underline hover:text-slate-900">Get them now</a> for $29 per month.</p>
+              </footer>
+            </article>
+
+            <article class="bg-white border px-5 border-green-500 relative before:absolute
+             before:bg-green-600 before:-top-7 before:block before:w-full before:py-1 before:content-['recomended'] before:text-white before:rounded-t-xl before:uppercase before:font-bold before:text-sm
+             flex flex-col gap-10 items-center ">
+              <header class="gap-5 flex flex-col mt-5 w-3/4 items-center">
+                <h2 class="md:text-5xl text-green-600 font-bold">Small Business Plan</h2>
+                <p class="text-slate-700 md:text-xl">$59 per month</p>
+                <button class="bg-green_light border-green_light py-3 font-bold text-slate-700 hover:text-slate-800  hover:translate-0 hover:scale-125 w-3/4">Sign Up Now</button>
+              </header>
+              <main class="flex gap-5 flex-col">
+                <span class="text-slate-700 font-bold uppercase text-xs">you get pulse basics, plus:</span>
+                <ul class="text-start flex flex-col gap-5 list-inside  list-image-[url(assets/Images/checkmark.png)]">
+                  <li>Manage cash flow across multiple financial accounts</li>
+                  <li>
+                    Invite your investors, book keeper, or management team to
+                    see reports or manage cash flow
+                  </li>
+                  <li>
+                    Integrate with QuickBooks Online for more accurate cash flow
+                  </li>
+                  <li>
+                    Track your actual cash flow alongside your projected cash
+                    flow
+                  </li>
+                </ul>
+              </main>
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
