@@ -28,7 +28,7 @@
     <style type="text/tailwindcss">
       @layer utilities {
         .container {
-          @apply flex mx-auto md:w-3/4 w-full px-5 md:px-0;
+          @apply flex mx-auto lg:w-3/4 w-full px-2 lg:px-3 
         }
         button {
           @apply border-green_solid border-2 py-1 px-5 hover:translate-x-1 hover:-translate-y-1 after:bg-green_solid;
@@ -39,10 +39,24 @@
         .shadow-copy {
           box-shadow: -5px 5px 0px 0px #00ad6a;
         }
+        .shadow-footer{
+          box-shadow: -5px 5px 0px 0px rgb(80, 80, 80);
+        }
         header div span {
           @apply w-full h-1 bg-green-600;
         }
-       
+        .hero-2 article header{
+          @apply font-bold text-xl
+        }
+        .hero-2 article main{
+          @apply text-slate-700
+        }
+        footer li{
+          @apply text-green_solid font-bold hover:text-white hover:cursor-pointer
+        }
+       footer a{
+        @apply underline
+       }
       }
     </style>
   </head>
@@ -74,8 +88,10 @@
     </header>
 
     <main>
-      <div class="hero-1 mt-16">
-        <div class="container flex-col items-center text-center gap-y-20">
+
+
+      <div class="hero-1 mt-16 mb-16">
+        <div class="container flex-col  items-center text-center gap-y-20">
           <div class="flex flex-col w-1/2 gap-y-5">
             <h1 class="md:text-6xl font-bold">Try Pulse free for 30 days.</h1>
             <p>
@@ -84,8 +100,10 @@
             </p>
           </div>
 
-          <div class="grid md:grid-cols-3 grid-cols-1 gap-10">
-            <article class="w-3/4 text-start flex flex-col gap-y-5 text-slate-700">
+          <div class="md:flex-row  flex flex-col gap-y-10  ">
+
+
+            <article class="md:w-1/2 text-start flex flex-col gap-y-5 text-slate-700">
               <header class="text-green-600 font-bold md:text-xl text-base" >
                 These are what we call the Pulse Basics. They’re what every
                 customer gets.
@@ -119,18 +137,21 @@
                 <p><a href="#" class="underline hover:text-slate-900">Get them now</a> for $29 per month.</p>
               </footer>
             </article>
-
+            
             <article class="bg-white border px-5 border-green-500 relative before:absolute
-             before:bg-green-600 before:-top-7 before:block before:w-full before:py-1 before:content-['recomended'] before:text-white before:rounded-t-xl before:uppercase before:font-bold before:text-sm
+             before:bg-green-600 before:-top-7   before:block before:w-full before:py-1 
+             w-full md:w-8/12 md:pb-5 
+             before:content-['recomended'] before:text-white before:rounded-t-xl before:uppercase before:font-bold before:text-sm
              flex flex-col gap-10 items-center ">
+          
               <header class="gap-5 flex flex-col mt-5 w-3/4 items-center">
                 <h2 class="md:text-5xl text-green-600 font-bold">Small Business Plan</h2>
                 <p class="text-slate-700 md:text-xl">$59 per month</p>
                 <button class="bg-green_light border-green_light py-3 font-bold text-slate-700 hover:text-slate-800  hover:translate-0 hover:scale-125 w-3/4">Sign Up Now</button>
               </header>
-              <main class="flex gap-5 flex-col">
+              <main class="flex gap-5 flex-col ">
                 <span class="text-slate-700 font-bold uppercase text-xs">you get pulse basics, plus:</span>
-                <ul class="text-start flex flex-col gap-5 list-inside  list-image-[url(assets/Images/checkmark.png)]">
+                <ul class="text-start flex flex-col gap-5  list-inside  list-image-[url(assets/Images/checkmark.png)]">
                   <li>Manage cash flow across multiple financial accounts</li>
                   <li>
                     Invite your investors, book keeper, or management team to
@@ -146,9 +167,196 @@
                 </ul>
               </main>
             </article>
+
+
+
+
+
+
+
+
+
+            <article class="bg-white  px-5
+             flex flex-col gap-5 items-center w-full md:w-3/4 md:scale-90 lg:-translate-x-4">
+             <div class="bg-slate-200 -mx-5 w-full  p-6 text-slate-700 text-sm">Complex business with multiple financial accounts, currencies , or auditing needs?</div>
+              <header class="gap-5 flex flex-col mt-5 w-3/4 items-center">
+                <h2 class="md:text-5xl text-green-600 ">Unlock Extra Features</h2>
+                <p class="text-slate-700 md:text-xl">$89 per month</p>
+                <button class="bg-green_light border-green_light py-3 font-bold text-slate-700 hover:text-slate-800 
+                 hover:translate-0 hover:scale-125 w-3/4">Try Premium</button>
+              </header>
+              <main class="flex gap-5 flex-col">
+                <span class="text-slate-700 font-bold uppercase text-xs">get it all, plus:</span>
+                <ul class="text-start flex flex-col gap-5 list-inside pb-5 list-image-[url(assets/Images/checkmark.png)]">
+                  <li>Manage cash flow across multiple financial accounts</li>
+                  <li>
+                    Convert to any currency for localized cash flow reporting and projections
+                  </li>
+                  <li>
+                    Attach invoices or contracts to your cash flow entries for accountability and auditing
+                  </li>
+                  
+                </ul>
+              </main>
+            </article>
           </div>
+
+
+          <div class="flex flex-col gap-4 text-center items-center">
+            <img src="https://pulseapp.com/img/subvert-avatar.png" alt="subvert">
+            <q class="text-2xl w-3/4">Pulse is worth every penny because it empowers 
+              business owners with critical financial insight and knowledge.</q>
+              <span class="text-green-500 font-bold uppercase text-sm">
+                Subvert Marketing, Inc.
+              </span>
+          </div>
+
+
+
+
         </div>
       </div>
+
+
+      <div class="hero-2 bg-white">
+        <div class="container flex-col gap-10 py-20">
+
+
+          <h2 class="font-bold text-5xl">FAQ</h2>
+
+          <div class="grid md:grid-cols-2 gap-10">
+            <article>
+              <header>How does the 30-day free trial work?</header>
+              <main>You can use Pulse absolutely free for 30 days. After 30 days, we will charge the credit card you used when you sign up. If you choose to cancel 
+                your account before your trial ends, your card will not be charged.</main>
+            </article>
+
+            <article>
+              <header>If I upgrade an existing account, do I get another free trial?</header>
+              <main>Brand new accounts are the only ones eligible for a 30-day free trial. If you upgrade an existing account, your credit card will be billed 
+                the new amount on the date of your next billing cycle.</main>
+            </article>
+
+
+            <article>
+              <header>What is a “Financial Account”?</header>
+              <main>
+                <p>Financial Accounts are a grouping of income and expense items 
+                  that can be used for tracking or reporting purposes.</p>
+                  <p class="mt-10">They’re designed to be flexible and can be used to differentiate between bank accounts, companies, 
+                    individuals or between personal and business entries</p>
+              </main>
+            </article>
+
+
+
+            <article>
+              <header>Do I have to commit to a long-term contract?</header>
+              <main>No. There is no contract when you use Pulse, other 
+                than agreeing to our Terms of Service.</main>
+            </article>
+
+
+
+
+            <article>
+              <header>Will I be able to cancel my account if I don’t use Pulse?</header>
+              <main>Yes – you can cancel your account at any time. 
+                To cancel your account, go to your billing page and click on “Please cancel my account” at the bottom of the page. The account owner is the only one who can cancel an account. An email request to delete an account is not considered cancellation.</main>
+            </article>
+
+
+
+
+            <article>
+              <header>What types of payments do you accept?</header>
+              <main>We accept payments made online using Visa, Mastercard, 
+                Discover, and American Express.</main>
+            </article>
+
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
     </main>
+
+
+    <footer class="bg-black">
+      <div class="container pt-28 pb-5 flex-col gap-40 ">
+        <div class="main-content flex flex-col md:flex-row gap-10 justify-between ">
+        <div class="flex flex-col items-center md:items-start">
+          <img src="https://pulseapp.com/img/pulse-logo.svg" alt="pulse-logo" class="mb-10 w-48">
+          <button class="bg-gradient-to-l border-0 from-green-400 to-green_solid py-4 px-6 font-bold hover:shadow-footer w-full md:w-auto">Sign Up for a Free 30-Day Trial</button>
+        </div>
+
+        <div class="flex justify-between md:justify-evenly md:gap-20  mt-10 md:mt-0 md:w-auto w-full">
+          <ul class="flex flex-col gap-5">
+            <h3 class="text-white text-2xl font-bold">Product</h3>
+            <li><a href="#"></a>Features</li>
+            <li><a href="#"></a>Pricing</li>
+            <li><a href="#"></a>Sign Up</li>
+          </ul>
+
+
+          
+          
+          
+          
+          <ul class="flex flex-col gap-5">
+            <h3 class="text-white text-2xl font-bold">Company</h3>
+            <li><a href="#"></a>Customer Storiess</li>
+            <li><a href="#"></a>About</li>
+            <li><a href="#"></a>Contact</li>
+          </ul>
+          
+          <ul class="flex flex-col gap-5">
+            <h3 class="text-white text-2xl font-bold">Resources</h3>
+            <li><a href="#"></a>Support</li>
+            <li><a href="#"></a>Blog</li>
+          </ul>
+          
+        </div>
+      
+
+
+
+
+        </div>
+        <div class="copyright text-gray-500 text-xs">
+          <p> ©2019 Pulseapp.com, Inc. All Rights Reserved | 
+            <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">EU Privacy</a></p>
+          <p>Pulse is made by 
+            <a href="#">Simple Focus</a>. We also make <a href="#">Ballpark</a>, <a href="#">Sifter</a>, and<a href="#"> Curated</a>.</p>
+  
+        </div>
+      </div>
+    </footer>
+
+
+
+
   </body>
 </html>
